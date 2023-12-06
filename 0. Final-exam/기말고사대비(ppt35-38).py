@@ -122,6 +122,7 @@ class File_1:
 
     def __del__(self):
         """
+        instantiation한 객체들의 소멸자.
         """
         try :
             if D:
@@ -131,6 +132,10 @@ class File_1:
             print("\n>> 경고! 소멸자에 오류가 있습니다. : ", e)
 
 class MyFileException(Exception):
+    """
+    User-defined Exception handler를 이용해서 
+    새 파일 my_new_notest.txt에 대하여 w mode으로 대응.
+    """
     def __init__(self, msg):
         self.msg = msg
         if D:
